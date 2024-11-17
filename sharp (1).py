@@ -226,10 +226,10 @@ def handle_message(message):
                         f"Authorized Until: {valid_until}\n"
                         f"Timestamp: {datetime.now().isoformat()}. Verified by {USERNAME}*")
         else:
-            response = f"*Profile unknown. Contact {@master_tokyo} for authorization.*"
+            response = f"*Profile unknown. Contact {USERNAME} for authorization.*"
         bot.reply_to(message, response, parse_mode='Markdown')
     elif message.text == "📜 Mission Brief":
-        bot.reply_to(message, f"*For support, type /help or contact {@master_tokyo} at HQ.*", parse_mode='Markdown')
+        bot.reply_to(message, f"*For support, type /help or contact {USERNAME} at HQ.*", parse_mode='Markdown')
     elif message.text == "📞 Contact HQ":
         bot.reply_to(message, f"*Direct Line to HQ: {USERNAME}*", parse_mode='Markdown')
     else:
